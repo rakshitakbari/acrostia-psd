@@ -8,6 +8,14 @@
     height: auto;
     padding: 195px 0 114px;
     .dm-our-work-title{
+        h1{
+            @include media-breakpoint-down(md){
+                font-size: 40px; 
+            }
+            @include media-breakpoint-down(sm){
+                  font-size: 30px;  
+            }
+        }
         p{  
             font-size: 14px;
             color: $white;
@@ -21,6 +29,7 @@
         border-top: 1px solid #94b963;
         border-bottom: 1px solid #94b963;
         padding: 30px 15px;
+        margin-top: 20px;
         @include media-breakpoint-down(sm){
             text-align: center;
             display: inline-block;
@@ -35,6 +44,10 @@
             padding: 0;
             display: flex;
             margin-bottom: 0;
+            @include media-breakpoint-down(sm){
+                justify-content: center;
+                margin-top: 20px;
+            }
             cursor: pointer;
             li{
                 color: $white;
@@ -66,9 +79,19 @@
         }
     }
     .dm-forst-4-image{
-        margin: 40px -15px 20px;
+        margin: 40px -15px 0px;
+        justify-content: center;
+        &:last-child{
+            @include media-breakpoint-down(md){
+                margin-top: 0;
+            }
+        }
     }
     .dm-image-all{
+        width: auto;
+        @include media-breakpoint-down(md){
+            margin-bottom: 20px;
+        }
         .dm-image-text{
             background-color: #eeeeee;
             padding: 10px;

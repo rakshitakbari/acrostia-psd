@@ -30,31 +30,69 @@
       font-size: 60px;
       color: $white;
       font-weight: 700;
+      @include media-breakpoint-down(md){
+          font-size: 50px; 
+      }
+      @include media-breakpoint-down(sm){
+          font-size: 35px;  
+      }
   }
   p{
-      font-size: 30px;
-      color: #ec9da2;
+      font-size: 20px;
+      color: #333;
       font-weight: 500;
   }
   .ts_button{
+    position: relative;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 38px;
+    border: 1px solid #333;
+    background-color: transparent;
+    border-radius: 10px;
+    color: $white;
+    overflow: hidden;
+    text-decoration: none;
       &:hover{
         > .ts_btn_span_txt {
             opacity: 0;
             -webkit-transform: translateY(-50%);
             -moz-transform: translateY(-50%);
             transform: translateY(-50%);
-        }   
+        } 
+        .ts-btn-text-flip {
+            opacity: 1;
+            -webkit-transform: translateY(0%);
+            -moz-transform: translateY(0%);
+            transform: translateY(0%);
+        }  
       }
       > .ts_btn_span_txt {
-            font-size: 16px;
-            font-weight: 600;
-            padding: 14px 38px;
-            border: 1px solid $white;
-            background-color: transparent;
-            border-radius: 10px;
-            color: $white;
             -webkit-transition: -webkit-transform 0.15s ease-out, opacity 0.15s;
             transition: transform 0.15s ease-out, opacity 0.15s;
         }
-      }    
+      }  
+      .ts-btn-text-flip{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        background: #333;
+        -webkit-transform: translateY(50%);
+        -moz-transform: translateY(50%);
+        transform: translateY(50%);
+        opacity: 0;
+        -webkit-transition: -webkit-transform 0.15s ease-out, opacity 0.15s;
+        transition: transform 0.15s ease-out, opacity 0.15s;
+        > .ts_btn_span_txt {
+          display: inline-block;
+          color: $white;
+          margin-top: 8%;
+          -webkit-transition: -webkit-transform 0.15s ease-out, opacity 0.15s;
+          transition: transform 0.15s ease-out, opacity 0.15s;
+      } 
+    }  
   }
