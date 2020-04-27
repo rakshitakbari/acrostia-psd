@@ -1,0 +1,131 @@
+.dm-contact-us{
+  background-image: url("../images/contact-us.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding: 185px 0 77px;
+  .dm-contact-us-title1{
+    margin-bottom: 115px;
+    p{  
+        font-size: 14px;
+        color: $white;
+        font-weight: normal;
+    }
+  }
+  .dm-contact-us-title{
+    form{
+      margin-top: 20px;
+      .dm-button{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        button{
+          border: none;
+          padding: 10px 105px;
+          background-color: #df5c64;
+          box-shadow: 0px 3px #c85259;
+          border-radius: 5px;
+          color: $white;
+          font-weight: bold;
+          font-size: 26px;
+        }
+      }
+      
+    }
+    span{
+      font-size: 30px;
+      color: $white;
+      font-weight: 300;
+    }
+    .dm-add-title{
+      margin: 20px 0 50px;
+      h6{
+        font-size: 20px;
+        color: #c0dfda;
+        font-weight: bold;
+      }
+      p{
+        font-size: 16px;
+        color: $white;
+        font-weight: normal;
+        margin-bottom: 0;
+      }
+    }
+    .dm-contact-us-details{
+      ul{
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+        li{
+          span{
+            font-size: 16px;
+            color: #c0dfda;
+            font-weight: bold;
+          }
+          a{
+            font-size: 16px;
+            color: $white;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+    .dm-contact-us-form{
+      display: flex;
+      width: 100%;
+      .form-group{
+        width: 100%;
+        &.dm-frist-input{
+          input, textarea{
+            border: none;
+            border-radius: 5px;
+            background-color: #68a097;
+            font-size: 16px;
+            font-weight: normal;
+            color: $white;
+            ::-webkit-input-placeholder {
+                color: #82c8bd;
+                font-size: 16px;
+                font-weight: normal;
+              }
+
+              ::-moz-placeholder {
+                color: #82c8bd;
+                font-size: 16px;
+                font-weight: normal;
+              }
+
+              :-ms-input-placeholder {
+                color: #82c8bd;
+                font-size: 16px;
+                font-weight: normal;
+              }
+              :-moz-placeholder {
+                color: #82c8bd;
+                font-size: 16px;
+                font-weight: normal;
+            }
+          }
+          textarea{
+            height: 180px;
+          }
+        }
+        &.dm-input-white{
+          input{
+            border: none;
+            border-radius: 5px;
+          }
+        }
+      }
+      .dm-textarea-space{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .dm-mp-image{
+    margin: auto 0;
+  }
+}
